@@ -2,13 +2,16 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<meta name="description" content="Website description">
+	<meta name="keywords" Content="Keywords">
 	<title>FinalExamAndResearchStudyLog</title>
 </head>
 
 <body>
-	<p>NAME: <b>Yuancheng Zhang</b></p>
-	<p>WORD COUNT: <b>XXXXXX words</b></p>
 
+	<p>NAME: <b>Yuancheng Zhang</b></p>
+	<p>WORD COUNT: <b><span id = counter>0</span> words</b></p>
+	
 	<h4>Final Exam</h4>
 
 	<ol type="1">
@@ -20,9 +23,24 @@
 	<h4>Reseach/Study Log</h4>
 	
 	<ol start="21">
-		<li>Coffee</li>
-		<li>Tea</li>
-		<li>Milk</li>
+		<li><b>Centralized System</b> or <b>Single Processor System</b> </li>
+		<li><b>Distributed System</b></li>
+		<li><b>Middleware</b></li>
+		<li><b>Groupware</b></li>
+		<li><b>Four important goals</b> of building a distributed system.</li>
+		<li><b>IDL</b> or <b>Interface Definition Language</b></li>
+		<li><b>DNS</b> or <b>Domain Name System</b>, <a href="http://www.godaddy.com">GoDaddy.com</a></li>
+		<li><b>Asynchronous Communication</b></li>
+		<li><b>Cluster Computing</b></li>
+		<li><b>Grid Computing</b></li>
 	</ol>
+
+	
+	<script>
+		var context = document.body.innerHTML;
+		var regex = /\s+/gi;
+		var words = context.trim().replace(regex, ' ').split(' ').length;
+		document.getElementById("counter").innerHTML = words; 
+	</script>
 </body>
 </html>
