@@ -34,12 +34,10 @@
 		<li><b>Cluster Computing</b></li>
 		<li><b>Grid Computing</b></li>
 	</ol>
-
 	
 	<script>
 		var context = document.body.innerHTML;
-		var regex = /\s+/gi;
-		var words = context.trim().replace(regex, ' ').split(' ').length;
+		var words = context.trim().replace(/\s+/gi, ' ').split(' ').length;;
 		document.getElementById("counter").innerHTML = words; 
 	</script>
 </body>
