@@ -5,102 +5,254 @@
 	<meta name="description" content="Website description">
 	<meta name="keywords" Content="Keywords">
 	<title>FinalExamAndResearchStudyLog</title>
+	<style>
+	gr {
+		color: grey;
+	}
+	i {
+		color: lightgrey;
+	} 
+	code {
+		background-color: black;
+		font-family: COURIER;
+		font-size: 90%;
+		color: lightgreen;
+	}
+	</style>
 </head>
 
 <body>
 
 	<p>NAME: <b>Yuancheng Zhang</b></p>
-	<p>WORD COUNT: <b><span id = counter>0</span> words</b> (maybe not accurate)</p>
+	<p>WORD COUNT: <b><span id = counter>2605</span> words</b> (maybe not exactly accurate)</p>
 	
 	<h4>Final Exam</h4>
 
 	<ol type="1">
-		<li>Coffee</li>
-		<li>Tea</li>
-		<li>Milk</li>
+		<li>
+			<p><b>Centralized System</b> or <b>Single Processor System</b> <i>ch.1</i> is system as a host multiple terminal. No terminal operates data, all data processing is on the host. It is used in most banking systemlarge, large enterprises, research institutes, military and government. A large part is to follow the original software is still using a centralized system, and the software is often very expensive. It was popular in the last century, now it is old fashion.</p>
+		</li>
+		<li>
+			<p><b>Middleware</b> <i>ch.1.1</i> is a separate system software or service program. It is used in distributed applications to share resources between different technologies. It is located above the C/S operating systems. It manages computer resources and network communications. Two separate stand-alone application or system software can be connect through middleware. Even if they have different interfaces, they can still exchange information with each other through the middleware. A key way to execute middleware is sending and receiving messages. By middleware, applications can work on multiple platforms or OS environment.</p>
+			<p>For example, when I use dropbox, the middleware is used to connect database system in the dropbox server. This allows me to upload or download my online achives from the server to my client.</p>
+		</li>
+		<li>
+			<p>A <b>IDL</b> or <b>Interface Definition Language</b> file <i>ch.1.2.3</i> is used to define a common application programming interface (API) in public. Interface in the IDL do not depend on any language. It supports software components written in different codes to communicate with each other.</p>
+			<p>For example, I can use IDLs to share some components in C code and Java code.</p>
+		</li>
+		<li>
+			<p><b>DNS</b> or <b>Domain Name System</b> <i>ch.3.4.2.2, ch.5.3.4</i> helps users find their way around the Internet. In every computer on the Internet has a unique IP address. Since the IP address are hard to remember, DNS allows users to use a bunch of common letters (the "domain name") to replace. </p>
+			<p>When I type a site domain name on my web browers, will connect to the DNS servers first and it give me back the web IP address. Then I can connect to the website. </p>
+			<p>I buy a domain name on <a href="http://www.godaddy.com">GoDaddy.com</a> which is a popular domain names supplier.</p>
+		</li>
+		<li>
+			<p><b>Synchronous Communication</b> <i>ch.4.1.2</i> is a real-time synchronous communications technology, requiring both parties to send and receive the same frequency and phase synchronization clock signal, as frame delinaeation. Sending and receiving are under the synchronization clock control.</p>
+		</li>
+		<li>
+			<p><b>Asynchronous Communication</b> <i>ch.1.2.4.2, ch.4.1.2</i> allows sending messages as frames. The data can be transmitted by frame and frame rather than in an order. The receiving end must always be ready to receive frames. The frame header must be provided with some special bit combination as frame delineation, so that the receiver can identify the beginning of a frame. The frame size could be different, and the send time could be also different. There are no external clock signal used in asynchronous communication.</p>
+		</li>
+		<li>
+			<p><b>Cluster Computing System</b> <i>ch.1.3.1, ch.3.4.2</i> is connected to multiple computers through a fast communication link. A cluster is a parallel or distributed system consists of a number of computers connected together. These computers work together and run a common set of applications on the same operation system. From the outside, they are simply a system that provides a unified external service. Computers connected via a cable to physically cluster, the connection through the cluster software programs. These connections allow the computer to use fault contingency and load balancing, and fault response and load balancing capabilities on a single machine is impossible. <br></p>
+			<p>A common use of a cluster computing system is to achieve load balancing cluster in a high-traffic site. A web page request is sent to the "manager" server(master node), then the server determines this request is processed by which Web server(cumpute node). It is sometimes called a Web Farm, depending on the construction like a farm field. It will be able to improve the traffic and processing speed.</p>
+			<p>The advantages of the cluster computing system is <gr>high scalability</gr>(esay to add or remove nodes), <gr>high availability</gr>(short downtime of system), and <gr>high manageability</gr>(the system administrator can remotely manage one or even a group of clusters, like as in a stand-alone system).</p>
+		</li>
+		<li>
+			<p><b>Grid Computing</b> <i>ch.1.3.1</i> is a new high-performance distributed computing methods. The main difference between grid computing system and the cluster computing system is that grids are heterogeneous while a cluster is homogenous. In other words, grid computing systems share computing resources for large-scale without centralized control mechanisms. It also can provide high-performance computing to meet the application requirements. This sharing is dynamic, flexible, secure and collaborative.</p>
+			<p><b>Cloud computing</b> is a kind of extension of grid computing, but they are different. There is an article, <i><a href="http://www.ibm.com/developerworks/library/wa-cloudgrid/">Cloud computing versus grid computing</a></i>, about the relationship between these two concepts.</p> 
+		</li>
+		<li>
+			<p><b>Process table</b> <i>ch.3.1.1</i> in linux shows general information about each process. When I type <code>ps -f</code> in the shell, it shows some general information about each running process. it includes user id (UID), process id (PID), parent process id (PPID), CPU usage (C or CP) start time (STIME), terminal associated with the process(TT or TTY), total CPU usage (TIME), and the name of the process (CMD). The following example is mime. 
+			</p>
+			<p><code>
+				yzhang@lpc-depaulsecure-200-246 ~> ps -f<br>
+				UID  _PID  PPID   C  _STIME ____TTY    ____IME _CMD<br>
+				501  8324  8323   0  6:13PM ttys000    0:00.16 -zsh<br>
+				501  8366  8324   0  6:14PM ttys000    0:00.47 fish<br>
+			</code></p>
+		</li>
+		<li>
+			<p>The <b>process</b> and <b>thread</b> <i>ch.3.1</i> has three difference. 
+				<ol>
+					<li>Processes are used for big tasks; threads are used for small tasks.</li>
+					<li>Process are not shared on memory; threads are shared on memory.</li>
+					<li>A program has at least one process; a process has at least one thread. </li>
+				</ol>
+			</p>
+
+			<p>Both are made by the performance of the running operating system. They are the basic unit for system application concurrency.</p>
+		</li>
+		<li>
+			<p><b>MMU</b> or <b>Memory Management Unit</b> <i>ch.3.1.1</i> is the central processing unit (CPU) used to manage virtual memory, physical memory control circuit, is also responsible for mapping virtual addresses to physical addresses, as well as providing hardware mechanism memory access authorization, multi-user multi-process operating system.</p>
+		</li>
+		<li>
+			<p><b>TLB</b> or <b>Translation Lookaside Buffer</b> <i>ch.3.1.1</i> is a memory management unit for improving the virtual address to physical address translation cache speed. TLB is a small, a virtual address cache, where each row holds a block composed of a single PTE. If there is no TLB, then twice each taking data needs to access memory, that check page table to get the physical address and fetch data.</p>
+			<p>
+				The first CPU appled TLB in the CPU X86 system was Intel-486 CPU. In the CPU inside the X86 system, generally have the following four groups TLB:
+				<ul>
+					<li>Group I: General page table cache (4K byte page) instruction page table cache (Instruction-TLB);</li>
+					<li>Group II: General cache page table (4K-byte pages) data page table cache (Data-TLB);</li>
+					<li>Group III: Large cache page table (2M/4M-byte page) instruction page table cache (Instruction-TLB);</li>
+					<li>Group IV: Large cache page table (2M/4M-byte page) data page table cache (Data-TLB);</li>
+				</ul>
+			</p>
+			<p>We learnt TLB in CSC 407.</p>
+		</li>
+		<li>
+			<p><b>Process Migration</b> <i>ch.3.5.1</i> is to move processes from one computing environment to another. There are two types of process migration. One is doing migration before process executing, and another one is doing both at same time. The first type is cheap, the secound is expensive.  </p>
+		</li>
+		<li>
+			<p><b>ISO/OSI Model</b> , <b>OSI Model</b> or <b>Open System interconnection Reference Model</b> <i>ch.4.1.1</i></p>
+			<p>Seven absrtaction layers. Layer 1 is the bottom. Layers 4-7 are host layers which transmit data; layers 1-3 are media layers which transmit bits.
+				<ol>
+					<li value = "7">Application: HTTP, FTP, SMTP.</li>
+					<li value = "6">Presentaiton: </li>
+					<li value = "5">Session</li>
+					<li value = "4">Transport: TCP, UDP</li>
+					<li value = "3">Network: IP</li>
+					<li value = "2">Data link: PPP, IEEE 802.2</li>
+					<li value = "1">Physical: DSL, USB</li>
+				</ol>
+			</p>
+		</li>
+		<li>
+			<p><b>MPI</b> or <b>Message-passing Interface</b> <i>ch.4.3.1.2</i> is designd to make users write portable different language code on parallel computers.</p>
+		</li>
+		<li>
+			<p><b>Message-queuing System</b> or <b>Message-oriented Middleware, MOM</b> <i>ch.4.3.2</i></p>
+			<p>Amazon has an such system name <a href="http://aws.amazon.com/cn/sqs/">Amazon Simple Queue Service (SQS)</a>.</p>
+		</li>
+		<li>
+			<p><b>The Globus Security Arechitecture</b> <i>ch.9.1.1</i> is based on an open architecture, open service resources and software libraries, and support for grid computing. Its purpose is to provide middleware services and libraries for building grid computing. Google and IBM announced their support for Globus Toolkit. </p>
+			<p>Some major Grid projects: NASA Grid (NASA IPG), the European Data Grid (Data Grid) and the US National Grid (NTG), etc.</p>
+		</li>
+		<li>
+			<p><b>Hash function</b> <i>ch.9.1.3</i> is used to map binary data of arbitray length to a binary value with short fixed length. The small value is called binary hash value. The hash value is unique and extremely compact numerical representation of a piece of data. It is generally used to quickly find and encryption algorithms.</p>
+		</li>
+		<li>
+			<p><b>CRC</b> or <b>Cyclic-redundancy Check</b> <i>ch.9.1.3</i> is add a <b>FCS</b>(<b>Frame CheckSequence</b>) in each data block. FCS contains detailed information on the frame, specifically for sending/receiving device compares the frame or not correct. If the data is incorrect, then send it again.</p>
+		</li>
+		<li>
+			<p><b>DES</b> or <b>Data Encryption Standard</b> <i>ch.9.1.3.1</i> is based on a 56-bit symmetric-key algorithm. It is out of data since the 56-bit key is too short to protect. Now it is replaced by <b>Advanced Encryption Standard</b> (<b>AES</b>) which has a key with a 128-to-256-bit variable length.</p>
+		</li>
 	</ol>
 
 	<h4>Reseach/Study Log</h4>
 	
 	<ol start="21">
-		<li><b>Centralized System</b> or <b>Single Processor System</b> </li>
-		<li><b>Distributed System</b></li>
-		<li><b>Middleware</b></li>
-		<li><b>Groupware</b></li>
-		<li><b>Four important goals</b> of building a distributed system.</li>
-		<li><b>IDL</b> or <b>Interface Definition Language</b></li>
-		<li><b>DNS</b> or <b>Domain Name System</b> in <i>ch.5.3.4</i>, <a href="http://www.godaddy.com">GoDaddy.com</a></li>
-		<li><b>Asynchronous Communication</b></li>
-		<li><b>Cluster Computing</b></li>
-		<li><b>Grid Computing</b></li>
-		<li><b>MOSIX</b></li>
-		<li><b>System Architecture</b></li>
-		<li><b>DHT</b> or <b>Distributed Hash Table</b> in <i>ch.2.2.2.1</i> and <i>ch.5.2.3</i></li>
-		<li><b>Superpeer</b> in <i>ch.2.2.2.4</i></li>
-		<li><b>Autonomic Computing</b> or <b>Self-star System</b> in <i>ch.2.4</i></li>
-		<li><b>Globule</b> in <i>ch.2.4.3</i></li>
-		<li>The different between <b>process</b> and <b>thread</b> in <i>ch.3.1</i></li>
-		<li><b>MMU</b> or <b>Memory Management Unit</b> in <i>ch.3.1.1</i></li>
-		<li><b>TLB</b> or <b>Translation Lookaside Buffer</b> in <i>ch.3.1.1</i></li>
-		<li><b>Thread Context</b> in <i>ch.3.1.1</i></li>
-		<li><b>IPC</b> or <b>Inter-process Communication</b> in <i>ch.3.1.1.1</i></li>
-		<li><b>LWP</b> or <b>Lightweight Processes</b> in <i>ch.3.1.1.2</i></li>
-		<li><b>Process Virtual Machine</b> in <i>ch.3.2.2</i></li>
-		<li><b>VMM</b> or <b>Virtual Machine Monitor</b> in <i>ch.3.2.2</i></li>
-		<li><b>X Window</b> in <i>ch.3.3.1.1</i></li>
-		<li><b>Iterative Server</b> and <b>Concurrent Server</b> in <i>ch.3.4.1</i></li>
-		<li><b>Superserver</b> in <i>ch.3.4.1</i></li>
+		
+		<li>
+			<p><b>Distributed System</b> <i>ch.1.1</i> is a system built on a distributed network software system.</p>
+		</li>
+		
+		<li><b>Groupware</b> <i>ch.1.2.1</i></li>
+		<li><b>Four important goals</b> of building a distributed system <i>ch.1.2</i>. 
+			<ul>
+				<li>Resources accessible: users can use and share remote resources, such as files, database records or web pages</li>
+				<li>Degree of transparency: is used to implemente and handle different situation when share resource. One example is that different users has different permissions for a same resourse. </li>
+				<li>Openness: use IDL as a standard rules to provide services.</li>
+				<li>Scalability: size, geographically scalability and administatively scalability. </li>
+			</ul>
+		</li>		
+		<li>
+			<p><b>MOSIX</b> <i>ch.1.3.1</i> is a type of distributed operating system based on Linux system.</p>
+		</li>
+		<li><b>System Architecture</b> <i>ch.2</i></li>
+		<li><b>DHT</b> or <b>Distributed Hash Table</b> <i>ch.2.2.2.1</i> and <i>ch.5.2.3</i></li>
+		<li>
+			<p><b>Superpeer</b> <i>ch.2.2.2.4</i> is a node as both a client and a server. It is generally used in popular peer-to-peer system. This structure is cheap, and does need to powerful servers.</p>
+		</li>
+		<li><b>Autonomic Computing</b> or <b>Self-star System</b> <i>ch.2.4</i></li>
+		
+
+		<li><b>Thread Context</b> <i>ch.3.1.1</i></li>
+		<li><b>IPC</b> or <b>Inter-process Communication</b> <i>ch.3.1.1.1</i></li>
+		<li><b>LWP</b> or <b>Lightweight Processes</b> <i>ch.3.1.1.2</i></li>
+		<li>
+			<p><b>PVM</b> or <b>Process Virtual Machine</b> <i>ch.3.2.2</i> is an embeddable, independent technical support for multi-process language, such as C++ and Java.</p>
+		</li>
+		<li>
+			<p><b>VMM</b> or <b>Virtual Machine Monitor</b> <i>ch.3.2.2</i> is to create and run one or more virtual machines on a host machine. It saves space on the host machine.</p>
+			<p>I think DePaul CDM Linux system has used this technology to divid students virtual machines.</p>
+		</li>
+		<li>
+			<p><b>X Window</b> <i>ch.3.3.1.1</i> is open-source windowing system. It differs from Apple OS or MS Windows. Users can change the interface and operating modes in X Window. It runs on UNIX-like operating system, such as Linux and old-version Mac OS. </p>
+			<p>Running Wireshark in Mac OS needs X Window installed, because Mac OS X does not include X Window any more.</p>
+		</li>
+		<li><b>Iterative Server</b> and <b>Concurrent Server</b> <i>ch.3.4.1</i></li>
+		<li>
+			<p><b>Superserver</b> <i>ch.3.4.1</i> receives the request and dispatch it to another servers. It can turn on/off other servers. It runs on background. Users can not directly control it.</p>
+		</li>
 		<li><b>Stateful server</b> and <b>stateless server</b>in <i>ch.3.4.1</i></li>
-		<li><b>Cluster Computing</b> in <i>ch.3.4.2</i></li>
-		<li><b>DNS</b> or <b>Domain Name System</b> in <i>ch.3.4.2.2</i></li>
-		<li><b>PlanetLab</b> in <i>ch.3.4.3.2</i></li>
-		<li><b>Process Migration</b> in <i>ch.3.5.1</i></li>
-		<li><b>ISO/OSI Model</b> , <b>OSI Model</b> or <b>Open System interconnection Reference Model</b> in <i>ch.4.1.1</i></li>
-		<li><b>Frame</b> and <b>Checksum</b> in <i>4.1.1.1</i></li>
-		<li><b>HTTP</b> or <b>HyperText Transfer Protocol</b> in <i>ch.4.1.1.3</i></li>
-		<li><b>FTP</b> or <b>File Transfer Protocol</b> in <i>ch.4.1.1.3</i></li>
-		<li><b>TCP</b> or <b>Transmission Control Protocol</b> in <i>ch.4.1.1.2</i></li>
-		<li><b>UDP</b> or <b>Universal Datagram Protocol</b> in <i>ch.4.1.1.2</i></li>
-		<li><b>RTP</b> or <b>Real-time Transport Protocol</b> in <i>ch.4.1.1.2</i></li>
-		<li><b>IP</b> or <b>Internet Protocol</b> in <i>ch.4.1.1.1</i></li>
-		<li><b>Persistent Communication</b> in <i>ch.4.1.2</i></li>
-		<li><b>Transient Communication</b> in <i>ch.4.1.2</i></li>
-		<li><b>Asynchronous Communication</b> in <i>ch.4.1.2</i></li>
-		<li><b>Synchronous Communication</b> in <i>ch.4.1.2</i></li>
-		<li><b>RPC</b> or <b>Remote Procedure Call</b> in <i>ch.4.2</i></li>
-		<li><b>Asynchronous RPC</b> <b>deferred synchronous RPC</b> in <i>ch.4.2.3</i></li>
-		<li><b>Little endian</b> and <b>big endian</b> format in <i>ch.4.2.2</i></li>
+		<li><b>PlanetLab</b> <i>ch.3.4.3.2</i></li>
+		
+		<li><b>Frame</b> and <b>Checksum</b> <i>4.1.1.1</i></li>
+		<li>
+			<p><b>HTTP</b> or <b>HyperText Transfer Protocol</b> <i>ch.4.1.1.3</i> is a communication protocol to transfer linked documents between clients and servers. It utilizes TCP/IP protocol on the World Wide Web. The latest version is HTTP 1.1.</p>
+		</li>
+		<li>
+			<p><b>FTP</b> or <b>File Transfer Protocol</b> <i>ch.4.1.1.3</i> is a communication protocol to transfer files between computers. It utilizes TCP/IP. We use it everyday.</p>
+			<p>There are another advanced FTP named <b>SSH File Transfer Protocol</b> or <b>SFTP</b>. According SFTP, user should use key to get file access. It is safer than FTP.</p>
+		</li>
+		<li>
+			<p><b>TCP</b> or <b>Transmission Control Protocol</b> <i>ch.4.1.1.2</i> is a communication protocol to transfer data based on a stable connection between two computers. It can keep data certainly receipt in a correct order.</p>
+		</li>
+		<li>
+			<p><b>UDP</b> or <b>Universal Datagram Protocol</b> <i>ch.4.1.1.2</i> is a communication protocol to send data from one computer to another one. It is cheap, no guarantee of anything.</p>
+		</li>
+		<li>
+			<p><b>RTP</b> or <b>Real-time Transport Protocol</b> <i>ch.4.1.1.2</i> is a communicaiton protocol to transfer audio and video based on IP networks. It is usually used in streaming media system, such as YouTube.</p>
+		</li>
+		<li>
+			<p><b>IP</b> or <b>Internet Protocol</b> <i>ch.4.1.1.1</i> is a primary communication protocol to seperate data into packets and deliver them to destinaltion. Every node on the network has a unique IP address. There are two version of IP address, IPv4 and IPv6. </p>
+			<p>When I type IP on Google.com, I can see my public IP address 75.132.23.246.</p>
+		</li>
+		<li><b>Persistent Communication</b> <i>ch.4.1.2</i></li>
+		<li><b>Transient Communication</b> <i>ch.4.1.2</i></li>
+		<li><b>RPC</b> or <b>Remote Procedure Call</b> <i>ch.4.2</i></li>
+		<li><b>Asynchronous RPC</b> <b>deferred synchronous RPC</b> <i>ch.4.2.3</i></li>
+		<li><b>Little endian</b> and <b>big endian</b> format <i>ch.4.2.2</i></li>
 		<li><b>DCE RPC</b> or <b>Distributed Computing Enviroment RPC</b>in <i>ch.4.2.4</i></li>
-		<li><b>Socket</b> in <i>ch.4.3.1</i></li>
-		<li><b>XTI</b> or <b>X/open Transport Interface</b> in <i>ch.4.3.1</i></li>
-		<li><b>MPI</b> or <b>Message-passing Interface</b> in <i>ch.4.3.1.2</i></li>
-		<li><b>Message-queuing System</b> or <b>Message-oriented Middleware, MOM</b> in <i>ch.4.3.2</i></li>
-		<li><b>WebSphere MQ</b> in <i>ch.4.3.3</i></li>
-		<li><b>QoS</b> or <b>Quality of Service</b> in <i>ch.4.4.2</i></li>
-		<li><b>MPEG</b> or <b>Motion Picture Experts Group</b> in <i>4.4.3</i></li>
-		<li><b>Anti-entropy</b> in <i>ch.4.5.2.1</i> <br></li>
-		<li><b>Rumor Spreading</b> or <b>Gossiping</b> in <i>ch.4.5.2.1</i></li>
-		<li><b>Naming System</b> in <i>ch.5</i></li>
-		<li><b>Root Server</b> in <i>ch.5.1</i></li>
-		<li><b>ARP</b> or <b>Address Resolution Protocol</b> in <i>ch.5.2.1.1</i></li>
-		<li><b>SSP Chain</b> in <i>ch.5.2.1.2</i></li>
-		<li><b>Iterative Name Resolution</b> in <i>ch.5.3.3.2</i></li>
-		<li><b>RDF</b> or <b>Resource Description Framework</b> in <i>ch.5.4.1</i></li>
-		<li><b>LDAP</b> or <b>Lightweight Directory Access Protocol</b> in <i>ch.5.4.2</i></li>
-		<li><b>DIT</b> or <b>Directory Information Tree</b> in <i>ch.5.4.2</i></li>
-		<li><b>DSA</b> or <b>Directory Service Agent</b> in <i>ch.5.4.2</i></li>
-		<li><b>DUA</b> or <b>Directory User Agent</b> in <i>ch.5.4.2</i></li>
-		<li><b>UDDI</b> or <b>Universal Directory and Discovery Integration</b> in <i>ch.5.4.2</i></li>
-		<li><b>AVTree</b> or <b>Attribute-value Tree</b> in <i>ch.5.4.3.1</i></li>
-		<li><b>Clock Synchronization</b> in <i>ch.6.1</i></li>
-		<li><b>UTC</b> or <b>Universal Coordinated Time</b> in <i>ch.6.1.1</i></li>
-		<li><b>GPS</b> or <b>Global Positioning System</b> in <i>ch.6.1.2</i></li>
-		<li><b>NTP</b> or <b>Network Time Protocol</b> in <i>ch.6.1.3.1</i></li>
-		<li><b>RBS</b> or <b>Reference Broadcast Synchronization</b> in <i>ch.6.1.3.3</i></li>
-		<li><b>Logic Clock</b> in <i>ch.6.2</i></li>
-		<li><b>Multicast</b> in <i>ch.6.2.2</i></li>
-		<li><b>Unicast</b> in <i>ch.7.4.3.3</i></li>
-		<li><b>AS</b> or <b>Autonomous System</b> in <i>ch.7.4.1</i></li>
+		<li><b>Socket</b> <i>ch.4.3.1</i></li>
+		<li>
+			<p><b>XTI</b> or <b>X/open Transport Interface</b> <i>ch.4.3.1</i> is in UNIX System V. It is used for networking application programming. XTI can be run over the TCP.</p>
+		</li>
+		
+		<li><b>WebSphere MQ</b> <i>ch.4.3.3</i></li>
+		<li><b>QoS</b> or <b>Quality of Service</b> <i>ch.4.4.2</i></li>
+		<li>
+			<p><b>MPEG</b> or <b>Motion Picture Experts Group</b> <i>4.4.3</i> is a group to set standards for transferring audio and video.</p>
+		</li>
+		<li><b>Anti-entropy</b> <i>ch.4.5.2.1</i> <br></li>
+		<li><b>Rumor Spreading</b> or <b>Gossiping</b> <i>ch.4.5.2.1</i></li>
+		<li><b>Naming System</b> <i>ch.5</i></li>
+		<li>
+			<p><b>Root Server</b> <i>ch.5.1</i> is a name server which contains the top-level domain (TLD). </p>
+		</li>
+		<li><b>ARP</b> or <b>Address Resolution Protocol</b> <i>ch.5.2.1.1</i></li>
+		<li><b>SSP Chain</b> <i>ch.5.2.1.2</i></li>
+		<li><b>Iterative Name Resolution</b> <i>ch.5.3.3.2</i></li>
+		<li><b>RDF</b> or <b>Resource Description Framework</b> <i>ch.5.4.1</i></li>
+		<li>
+			<p><b>LDAP</b> or <b>Lightweight Directory Access Protocol</b> <i>ch.5.4.2</i> is protocol to manage distributed directory systems over IP networks/</p>
+		</li>
+		<li><b>DIT</b> or <b>Directory Information Tree</b> <i>ch.5.4.2</i></li>
+		<li><b>DSA</b> or <b>Directory Service Agent</b> <i>ch.5.4.2</i></li>
+		<li><b>DUA</b> or <b>Directory User Agent</b> <i>ch.5.4.2</i></li>
+		<li><b>UDDI</b> or <b>Universal Directory and Discovery Integration</b> <i>ch.5.4.2</i></li>
+		<li><b>AVTree</b> or <b>Attribute-value Tree</b> <i>ch.5.4.3.1</i></li>
+		<li>
+			<p><b>Clock Synchronization</b> <i>ch.6.1</i> is big problem in distributed system because there are no global clock.</p>
+		</li>
+		<li>
+			<p><b>UTC</b> or <b>Universal Coordinated Time</b> <i>ch.6.1.1</i> is based on GMT but more accurate after add a leap second.</p>
+		</li>
+		<li><b>GPS</b> or <b>Global Positioning System</b> <i>ch.6.1.2</i></li>
+		<li><b>NTP</b> or <b>Network Time Protocol</b> <i>ch.6.1.3.1</i></li>
+		<li><b>RBS</b> or <b>Reference Broadcast Synchronization</b> <i>ch.6.1.3.3</i></li>
+		<li><b>Logic Clock</b> <i>ch.6.2</i></li>
+		<li><b>Multicast</b> <i>ch.6.2.2</i></li>
+		<li><b>Unicast</b> <i>ch.7.4.3.3</i></li>
+		<li><b>AS</b> or <b>Autonomous System</b> <i>ch.7.4.1</i></li>
 		<li><b>Network Topology</b>
 			<ul>
 				<li><b>Star Topology</b></li>
@@ -112,9 +264,9 @@
 			</ul>
 		</li>
 		<li><b>ROWA</b> or <b>read-one, write-alll</b></li>
-		<li><b>Redunsancy</b> in <i>ch.8.1</i></li>
+		<li><b>Redunsancy</b> <i>ch.8.1</i></li>
 		<li>The difference between <b>fault</b> and <b>error</b> in <b>ch.8.1.1</b></li>
-		<li><b>Failure Models</b> in <i>ch.8.1.2</i>
+		<li><b>Failure Models</b> <i>ch.8.1.2</i>
 			<ul>
 				<li><b>Crash failure</b></li>
 				<li><b>Omission failure</b></li>
@@ -123,10 +275,10 @@
 				<li><b>Arbitray failure</b> or <b>Byzantine failures</b></li>
 			</ul>
 		</li>
-		<li><b>TMR</b> or <b>Triple Modular Redundancy</b> in <i>ch.8.1.3</i></li>
-		<li>A <b>k fault tolerant</b> system in <i>ch.8.2</i></li>
-		<li>An <b>orphan</b> in <i>ch.8.3.2.5</i></li>
-		<li>The main four types of <b>security threats</b> in <i>ch.9.1.1</i>
+		<li><b>TMR</b> or <b>Triple Modular Redundancy</b> <i>ch.8.1.3</i></li>
+		<li>A <b>k fault tolerant</b> system <i>ch.8.2</i></li>
+		<li>An <b>orphan</b> <i>ch.8.3.2.5</i></li>
+		<li>The main four types of <b>security threats</b> <i>ch.9.1.1</i>
 			<ul>
 				<li><b>Interception</b></li>
 				<li><b>Interruption</b></li>
@@ -134,7 +286,7 @@
 				<li><b>Fabrication</b></li>
 			</ul>
 		</li>
-		<li>The main four types of <b>security mechanisms</b> in <i>ch.9.1.1</i>
+		<li>The main four types of <b>security mechanisms</b> <i>ch.9.1.1</i>
 			<ul>
 				<li><b>Encryption</b></li>
 				<li><b>Authentication</b></li>
@@ -142,25 +294,27 @@
 				<li><b>Audition</b></li>
 			</ul>
 		</li>
-		<li><b>The Globus Security Arechitecture</b> in <i>ch.9.1.1</i></li>
-		<li><b>SSL</b> or <b>Secure Socket Layer</b> in <i>ch.9.1.2.2</i></li>
-		<li><b>TCB</b> or <b>Trusted Computing Base</b> in <i>ch.9.1.2.3</i></li>
+		
+		<li>
+			<p><b>SSL</b> or <b>Secure Socket Layer</b> <i>ch.9.1.2.2</i>, and its successor, <b>Transport Layer Security</b> (<b>,TLS</b>), are to provide security and data integrity of a secure network communication protocol. TLS and SSL in the transport layer encryption for network connections.</p>
+		</li>
+		<li><b>TCB</b> or <b>Trusted Computing Base</b> <i>ch.9.1.2.3</i></li>
 		<li><b>RISSC</b> or <b>Reduced Interfaces for Secure System Components</b></li>
-		<li><b>Hash function</b> in <i>ch.9.1.3</i></li>
-		<li><b>CRC</b> or <b>Cyclic-redundancy Check</b> in <i>ch.9.1.3</i></li>
-		<li><b>DES</b> or <b>Data Encryption Standard</b> in <i>ch.9.1.3.1</i></li>
-		<li><b>RSA</b> in <i>ch.9.1.3.2</i>, a cryptographic algorithm, named from its three inventors. <b></b></li>
-		<li><b>MD5</b> in <i>ch.9.1.3.3</i></li>
-		<li><b>Kerberos</b> in <i>ch.9.2.4</i></li>
-		<li><b>Denial of service(DoS) attacks</b> in <i>ch.9.3.4</i></li>
-		<li><b>Distributed denial of service(DDoS) attacks</b> in <i>ch.9.3.4</i></li>
-		<li><b>KDC</b> or <b>a key distribution center</b> in <i>ch.9.4.1.1</i></li>
-		<li><b>Diffie-Hellman key exchange</b> in <i>ch.9.4.1.1</i></li>
-		<li><b>PEM</b> or <b>privacy enhanced mail</b> in <i>ch.9.4.1.2</i></li>
-		<li><b>PCA</b> or <b>policy certification authorities</b> in <i>ch.9.4.1.2</i></li>
-		<li><b>IPRA</b> or <b>Internet policy registration authority</b> in <i>ch.9.4.1.2</i></li>
+		
+		<li>
+			<p><b>RSA</b> <i>ch.9.1.3.2</i>, a cryptographic algorithm, named from its three inventors. <b></b></p>
+		</li>
+		<li><b>MD5</b> <i>ch.9.1.3.3</i></li>
+		<li><b>Kerberos</b> <i>ch.9.2.4</i></li>
+		<li><b>Denial of service(DoS) attacks</b> <i>ch.9.3.4</i></li>
+		<li><b>Distributed denial of service(DDoS) attacks</b> <i>ch.9.3.4</i></li>
+		<li><b>KDC</b> or <b>a key distribution center</b> <i>ch.9.4.1.1</i></li>
+		<li><b>Diffie-Hellman key exchange</b> <i>ch.9.4.1.1</i></li>
+		<li><b>PEM</b> or <b>privacy enhanced mail</b> <i>ch.9.4.1.2</i></li>
+		<li><b>PCA</b> or <b>policy certification authorities</b> <i>ch.9.4.1.2</i></li>
+		<li><b>IPRA</b> or <b>Internet policy registration authority</b> <i>ch.9.4.1.2</i></li>
 	</ol>
-	
+
 	<script>
 	var context = document.body.innerHTML;
 	var words = context.trim().replace(/\s+/gi, ' ').split(' ').length;;
